@@ -217,7 +217,7 @@ for j in range(len(districts)):
         flatStats['District'] = j
         flatStats['Price'] = getPrice(flat_page)
         coords = getCoords(flat_page)
-        flatStats["Dist"] = vincenty(coords, center).meters/1000
+        flatStats["Dist"] = vincenty(coords, center).meters/1000 #расстояние в километрах
         flatStats['rooms'] = getRoom(flat_page)
         flatStats['Metrdist'], flatStats['Walk'] = get_metroDist_walk(flat_page)[0], get_metroDist_walk(flat_page)[1]
         flatStats = get_roomInfo(flat_page, flatStats)
